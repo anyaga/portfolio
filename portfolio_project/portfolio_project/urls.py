@@ -20,9 +20,9 @@ from django.urls import path
 from portfolio_project import views
 
 urlpatterns = [
-    path('',views.main_action),
+    path('',views.main_action, name='main'),
     path('contact',views.contact_action,name='contact'),
     path('class_projects', views.class_action,name='class'),
     path('IT_projects', views.it_action, name='it'),
-    path('personal_project',views.personal_action, name='personal'),
+    path('personal_projects',views.personal_action, name='personal'),
 ]

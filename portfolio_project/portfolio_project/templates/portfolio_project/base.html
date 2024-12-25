@@ -3,7 +3,10 @@
     <head> 
         <title>{% block title %} {% endblock %}</title>
         {% load static%}
-        <link rel="stylesheet" type="text/css" href="/static/portfolio_project/portfolio.css">
+        <link rel="stylesheet" type="text/css" href="static/portfolio_project/portfolio.css">
+        <style>
+
+        </style>
     </head>
     <body>
         <div id="id_header_div">
@@ -17,6 +20,41 @@
             </div>
 
         </div>
+        <div class="container">
+            <div class="link">
+                <a href="{% url 'main'%}">
+                    <span class="text">Home</span>
+                </a>
+            </div>
+            <div class="link">
+                <a href="{% url 'class'%}">
+                    <span class="text">Class Projects</span>
+                </a>
+            </div>
+            <div class="link">
+                <a href="{%url 'it'%}">
+                    <span class="text">IT Projects</span>
+                </a>
+            </div>
+            <div class="link">
+                <a href="{% url 'personal'%}">
+                    <span class="text">Personal Projects</span>
+                </a>
+                
+            </div>
+            <div class="link">
+                <a href="">
+                  <span class="text">Resume</span></div>  
+                </a>
+                
+            <div class="link">
+                <a href="{% url 'contact'%}">
+                    <span class="text">Contact</span></div>
+                </a>
+                
+         </div>
+         
+         
 
         <div id="id_body_content">
             {% if message %}
