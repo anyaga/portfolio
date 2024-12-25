@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>{% block title %} {% endblock %}</title>
+        {% load static%}
+        <link rel="stylesheet" type="text/css" href="/static/portfolio_project/portfolio.css">
+    </head>
+    <body>
+        <div id="id_header_div">
+            <div>
+                <h1>Angel's Portfolio</h1>
+            </div>
+
+            <div id="id_top_bar">
+                {% block top-bar%}
+                {% endblock %}
+            </div>
+
+        </div>
+
+        <div id="id_body_content">
+            {% if message %}
+                {{message}}
+            {% endif %}
+
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
