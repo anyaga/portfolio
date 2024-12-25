@@ -25,4 +25,5 @@ urlpatterns = [
     path('class_projects', views.class_action,name='class'),
     path('IT_projects', views.it_action, name='it'),
     path('personal_projects',views.personal_action, name='personal'),
+    path('cad_projects',views.cad_action, name='cad'),
 ]
