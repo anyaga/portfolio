@@ -2,23 +2,42 @@
 
 {% block content %} 
     <div><h1 id="id_title">IT Projects</h1></div> 
+    <p id="page_summary"> 
+        This page contains a serious of IT Projects. These projects were done as an 
+        associate of an IT department in Carnegie Mellon's College of engineering, 
+        supporting the Chemical Engineering Department, the Biomedical Engineering
+        Department, and the Material Science and Engineering Department. These projects
+        were completed to help support staff and students and to further knowledge in
+        information technology.
 
-    <div id="id_cheme_store" class="box_blurb">
-        <h2 class="box_title">ODOO - ChemE Lab Store</h2>
-        <p class="box_content">ADD INFORMATION</p>
-        <a class="box_content" href="{% url 'odoo'%}">See More...</a>
-        <br><br>
-    </div>
-    <div id="id_appscript" class="box_blurb">
-        <h2 class="box_title">Google Appscript - Key Tracking Project</h2>
-        <p class="box_content">ADD INFORMATION</p>
-        <a class="box_content" href="{% url 'key_tracking' %}">See More...</a>
-        <br><br>
-    </div>
+
+    </p>
     <div id="id_ambidb" class="box_blurb">
-        <h2 class="box_title">Python Project - Amdibd</h2>
+        <div class="title_line">
+            <h2 class="box_title">Python Project - Amdibd</h2>
+            <p class="box_timeline">Timeline: Jan 2025 - PRESENT</p>
+        </div>  
         <p class="box_content">ADD INFORMATION</p>
         <a class="box_content" href="{% url 'amdibd'%}">See More...</a>
         <br><br>
     </div>
+    <div id="id_appscript" class="box_blurb">
+        <div class="title_line">
+            <h2 class="box_title">Google Appscript - Key Tracking Project</h2>
+            <p class="box_timeline">Timeline: Apr 2024 - Dec 2024</p>
+        </div>  
+        <p class="box_content">ADD INFORMATION</p>
+        <a class="box_content" href="{% url 'key_tracking' %}">See More...</a>
+        <br><br>
+    </div>    
+    <div id="id_cheme_store" class="box_blurb">
+        <div class="title_line">
+            <h2 class="box_title">ODOO - ChemE Lab Store</h2>
+            <p class="box_timeline">Timeline: Jan 2024 - May 2024</p>
+        </div>        
+        <p class="box_content">ADD INFORMATION</p>
+        <a class="box_content" href="{% url 'odoo'%}">See More...</a>
+        <br><br>
+    </div>
+
 {% endblock%}

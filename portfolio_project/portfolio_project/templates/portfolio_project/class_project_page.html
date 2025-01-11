@@ -8,20 +8,37 @@
 
 {% block content %} 
     <div><h1 id="id_title">Class Projects</h1></div>
+    <p id="page_summary"> 
+        This page contains information about software projects that were created as a part
+        of a course. These projects are all based on my own ideas, not specific assignments
+        based on the course curriculm. These projects do not contain any confidential 
+        information about the courses that would result in copyright infringement.
+
+    </p>
     <div id="id_capstone" class="box_blurb">
-        <h2 class="box_title">ECE Capstone</h2>
-        <p class="box_content">ADD INFORMATION</p>
-        <a class="box_content" href="{% url 'ece_capstone' %}">See More...</a>
+        <div class="title_line">
+            <h2 class="box_title">ECE Capstone</h2>
+            <p class="box_timeline">Timeline: Jan 2024 - May 2024</p>
+        </div>
+
+        <p  class="box_content">ADD INFORMATION</p>
+        <a  class="box_content" href="{% url 'ece_capstone' %}">See More...</a>
         <br><br>
     </div>
     <div id="id_webapps" class="box_blurb">
-        <h2 class="box_title">Web Applications Term Project</h2>
+        <div class="title_line">
+            <h2 class="box_title">Web Applications Term Project</h2>
+            <p class="box_timeline">Timeline: Sep 2024 - Dec 2024</p>
+        </div>
         <p class="box_content">ADD INFORMATION</p>
         <a class="box_content" href="{% url 'web_apps'%}">See More...</a>
         <br><br>
     </div>
     <div id="id_more!!!" class="box_blurb">
-        <h2 class="box_title">More Needs to be Added</h2>
+        <div class="title_line">
+            <h2 class="box_title">More Needs to be Added</h2>
+            <p class="box_timeline">Timeline: MTH 20XX - MTH 20XX</p>
+        </div>
         <p class="box_content">ADD INFORMATION</p>
         <a class="box_content" href="">See More...</a>
         <br><br>

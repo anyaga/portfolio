@@ -12,9 +12,15 @@ body{
 
 #page_title{
     color:white;
+    font-size:large;
     text-decoration: none;
+    font-family:"Gill Sans Extrabold", sans-serif;
+    text-transform: uppercase;
 }
 
+#page_summary{
+    font-size:1.3em;
+}
 /**
 https://codepen.io/sean_codes/pen/zwJQeB
 **/
@@ -89,19 +95,35 @@ div.content {
 }
 
 #id_title{
+    padding: 1em;
     text-align: center;
+}
+
+.title_line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
 .box_blurb{
-    margin: 1em 5em 1em 5em;
+    margin: 1em 3em 1em 3em;
     background-color: #8974e4;
     border-radius: 1.5em;
 }
 
 .box_title{
     color: aliceblue;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.box_timeline{
+    color: aliceblue;
     padding: 1em;
+    margin-right: 3em;
+    font-size: 20px;
 }
 
 .box_content{
@@ -112,6 +134,6 @@ div.content {
 }
 
 #id_body_content{
-    margin-left:3em;
-    margin-right:3em;
+    margin-left:8em;
+    margin-right:8em;
 }
