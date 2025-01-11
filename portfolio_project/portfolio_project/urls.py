@@ -20,10 +20,17 @@ from django.urls import path
 from portfolio_project import views
 
 urlpatterns = [
-    path('',views.main_action, name='main'),
-    path('contact',views.contact_action,name='contact'),
-    path('class_projects', views.class_action,name='class'),
-    path('IT_projects', views.it_action, name='it'),
-    path('personal_projects',views.personal_action, name='personal'),
-    path('cad_projects',views.cad_action, name='cad'),
+    path('',                  views.main_action,     name='main'),
+    path('resume',            views.resume_action,   name='resume'),
+    path('contact',           views.contact_action,  name='contact'),
+    path('class_projects',    views.class_action,    name='class'),
+    path('IT_projects',       views.it_action,       name='it'),
+    path('personal_projects', views.personal_action, name='personal'),
+    path('cad_projects',      views.cad_action,      name='cad'),
+    path('ece_cad',           views.ece_cad_action,  name='ece_cad'),
+    path('ece_capstone',      views.ece_capstone_action,  name='ece_capstone'),
+    path('web_apps',          views.web_apps_action,      name='web_apps'),
+    path('odoo',              views.odoo_action,          name='odoo'),
+    path('key_tracking',      views.key_tracking_action,  name='key_tracking'),
+    path('amdibd',            views.amdibd_action,        name='amdibd'),
 ]

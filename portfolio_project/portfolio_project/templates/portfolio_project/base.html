@@ -11,7 +11,7 @@
     <body>
         <div id="id_header_div">
             <div>
-                <h1>Angel's Portfolio</h1>
+                <a id="page_title" href="{% url 'main'%}" ><h1 >Angel's Portfolio</h1></a>
             </div>
 
             <div id="id_top_bar">
@@ -20,7 +20,8 @@
             </div>
             <div style="text-align: left;">
                 <form method="post">
-                    <button id="cat-button"type="submit" name="category-tab">&#9776;</button>
+                    <button id="cat-button"type="submit" name="category-tab" style="display:{{cdisplay}};" >{{ category_button }}</button>
+                    <button id="close_button" type="submit" name="close" style="display:{{bdisplay}};">|||</button>
                     {% csrf_token %}
                 </form>
             </div>
@@ -31,19 +32,24 @@
 
         <div class="sidebar"style="display:{{bdisplay}};">
             <form method="post" >
-                <button id="close_button" type="submit" name="close">X</button>
-                {% csrf_token %}
             </form>
             
             
             <a href="{% url 'main'%}"><span class="text" >Home</span></a>
             <a href="{% url 'class'%}"><span class="text">Class Projects</span></a>
+            
             <a href="{%url 'it'%}"><span class="text">IT Projects</span></a>
+
+
             <a href="{% url 'personal'%}"><span class="text">Personal Projects</span></a> 
+            
+
             <a href="{% url 'cad'%}"><span class="text">CAD Projects</span></a> 
-            <a href=""><span class="text">Resume</span></a>
+            
+
+            <a href="{% url 'resume'%}"><span class="text">Resume</span></a>
             <a href="{% url 'contact'%}"><span class="text">Contact</span></a>
-         
+        </div>
         <div id="id_body_content">
             {% if message %}
                 {{message}}

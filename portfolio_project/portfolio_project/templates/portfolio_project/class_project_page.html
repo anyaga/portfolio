@@ -1,1 +1,29 @@
 {% extends "portfolio_project/base.html"%}
+
+{% block title %} Class Project {% endblock%}
+
+{% block top-bar%}
+
+{% endblock %}
+
+{% block content %} 
+    <div><h1 id="id_title">Class Projects</h1></div>
+    <div id="id_capstone" class="box_blurb">
+        <h2 class="box_title">ECE Capstone</h2>
+        <p class="box_content">ADD INFORMATION</p>
+        <a class="box_content" href="{% url 'ece_capstone' %}">See More...</a>
+        <br><br>
+    </div>
+    <div id="id_webapps" class="box_blurb">
+        <h2 class="box_title">Web Applications Term Project</h2>
+        <p class="box_content">ADD INFORMATION</p>
+        <a class="box_content" href="{% url 'web_apps'%}">See More...</a>
+        <br><br>
+    </div>
+    <div id="id_more!!!" class="box_blurb">
+        <h2 class="box_title">More Needs to be Added</h2>
+        <p class="box_content">ADD INFORMATION</p>
+        <a class="box_content" href="">See More...</a>
+        <br><br>
+    </div>
+{% endblock%}

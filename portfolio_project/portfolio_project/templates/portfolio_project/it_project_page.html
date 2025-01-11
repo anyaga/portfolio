@@ -1,1 +1,24 @@
 {% extends "portfolio_project/base.html"%}
+
+{% block content %} 
+    <div><h1 id="id_title">IT Projects</h1></div> 
+
+    <div id="id_cheme_store" class="box_blurb">
+        <h2 class="box_title">ODOO - ChemE Lab Store</h2>
+        <p class="box_content">ADD INFORMATION</p>
+        <a class="box_content" href="{% url 'odoo'%}">See More...</a>
+        <br><br>
+    </div>
+    <div id="id_appscript" class="box_blurb">
+        <h2 class="box_title">Google Appscript - Key Tracking Project</h2>
+        <p class="box_content">ADD INFORMATION</p>
+        <a class="box_content" href="{% url 'key_tracking' %}">See More...</a>
+        <br><br>
+    </div>
+    <div id="id_ambidb" class="box_blurb">
+        <h2 class="box_title">Python Project - Amdibd</h2>
+        <p class="box_content">ADD INFORMATION</p>
+        <a class="box_content" href="{% url 'amdibd'%}">See More...</a>
+        <br><br>
+    </div>
+{% endblock%}

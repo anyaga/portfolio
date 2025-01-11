@@ -10,6 +10,11 @@ body{
     text-align: center;
 }
 
+#page_title{
+    color:white;
+    text-decoration: none;
+}
+
 /**
 https://codepen.io/sean_codes/pen/zwJQeB
 **/
@@ -18,7 +23,7 @@ https://codepen.io/sean_codes/pen/zwJQeB
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #8974e4;
+    background-color: #c9c2ec;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -68,20 +73,45 @@ div.content {
 
 #close_button{
     background-color: transparent;
-    border:0;
-    text-align: left;
-    padding: 16px;
-    color:rgb(2, 10, 83);
-    font-size: 25px;
+    color:rgb(251, 236, 245);    
+    font-size: 30px;
     font-weight:bold;
+    text-align: left;
     width: 100%;
 }
 
 #cat-button{
-    text-align: left;      
-    background-color: transparent;
-    font-size: 25px;
+    background-color: transparent;    
     color:rgb(251, 236, 245);
-    border-width:0px;
-  
+    font-size: 25px;
+    font-weight:bold;
+    text-align: left;      
+}
+
+#id_title{
+    text-align: center;
+}
+
+
+.box_blurb{
+    margin: 1em 5em 1em 5em;
+    background-color: #8974e4;
+    border-radius: 1.5em;
+}
+
+.box_title{
+    color: aliceblue;
+    padding: 1em;
+}
+
+.box_content{
+    color: aliceblue;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+#id_body_content{
+    margin-left:3em;
+    margin-right:3em;
 }
