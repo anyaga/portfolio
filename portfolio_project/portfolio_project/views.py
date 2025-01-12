@@ -3,7 +3,13 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 #Helper Function for category button
 def category_press(request):
+
     context = {}
+    context['class_proj_button']    = "none"
+    context['IT_proj_button']       = "none"    
+    context['personal_proj_button'] = "none"
+    context['cad_proj_button']      = "none"
+
     context['category_button'] = "inline-block"
     context['sidebar_display'] = "none"
     context['sidebar_width']   = "0%"
@@ -15,12 +21,42 @@ def category_press(request):
         context['sidebar_width']   = "25%"
         context['main_left']       = "35%" 
 
-        #context['cdisplay'] = "none"
-    if  request.method == 'POST' and 'close' in request.POST:
+
+
+    if  request.method == 'POST' and 'class_proj_button' in request.POST:
+        context['class_proj_button'] = "block"
         context['category_button'] = "inline-block"
-        context['sidebar_display'] = "none"
-        context['sidebar_width']   = "0%"
-        context['main_left']       = "10%" 
+        context['sidebar_display'] = "block"
+        context['sidebar_width']   = "25%"
+        context['main_left']       = "35%" 
+
+    if  request.method == 'POST' and 'IT_proj_button' in request.POST:
+        context['IT_proj_button'] = "block"
+        context['category_button'] = "inline-block"
+        context['sidebar_display'] = "block"
+        context['sidebar_width']   = "25%"
+        context['main_left']       = "35%"
+
+    if  request.method == 'POST' and 'personal_proj_button' in request.POST:
+        context['personal_proj_button'] = "block"
+        context['category_button'] = "inline-block"
+        context['sidebar_display'] = "block"
+        context['sidebar_width']   = "25%"
+        context['main_left']       = "35%" 
+               
+    if  request.method == 'POST' and 'cad_proj_button' in request.POST:
+        context['cad_proj_button'] = "block"
+        context['category_button'] = "inline-block"
+        context['sidebar_display'] = "block"
+        context['sidebar_width']   = "25%"
+        context['main_left']       = "35%"        
+
+        #context['cdisplay'] = "none"
+    # if  request.method == 'POST' and 'close' in request.POST:
+    #     context['category_button'] = "inline-block"
+    #     context['sidebar_display'] = "none"
+    #     context['sidebar_width']   = "0%"
+    #     context['main_left']       = "10%" 
     return context
   
 def main_action(request):
