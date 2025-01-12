@@ -29,7 +29,7 @@ https://codepen.io/sean_codes/pen/zwJQeB
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #c9c2ec;
+    background-color: #a59bd8;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -47,16 +47,20 @@ https://codepen.io/sean_codes/pen/zwJQeB
     color: white;
 }
 
-.sidebar a:hover:not(.active) {
-    background-color: #555;
+/* .sidebar a:hover:not(.active) {
+    background-color: #39235b;
     color: white;
-}
+} */
 
 div.content {
     margin-left: 10%;
     margin-right: 10%;
     padding: 1px 16px;
     height: 1000px;
+}
+
+.article_button{
+    background-color: #563fbd;
 }
 
 @media screen and (max-width: 700px) {
@@ -97,6 +101,7 @@ div.content {
 #id_title{
     padding: 1em;
     text-align: center;
+    font-style: Ro;
 }
 
 .title_line{
@@ -137,3 +142,38 @@ div.content {
     margin-left:8em;
     margin-right:8em;
 }
+
+
+.wrap {
+    float: left; 
+    margin: 5px;
+    padding-right:2em;
+    padding-bottom: 1em;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }

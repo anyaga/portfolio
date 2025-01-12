@@ -10,3 +10,17 @@ function addClass(id){
       links[id].classList.add('hover')
    }, id*750) 
 }
+
+function sidebar_open() {
+   document.getElementById("id_body_content").style.marginLeft = "25%";
+   document.getElementById("sidebar").style.width = "25%";
+   document.getElementById("sidebar").style.display = "block";
+   document.getElementById("cat-button").style.display = 'none';
+ }
+
+ function sidebar_close() {
+   document.getElementById("id_body_content").style.marginLeft = "25%";
+   document.getElementById("sidebar").style.width = "25%";
+   document.getElementById("sidebar").style.display = "block";
+   document.getElementById("cat-button").style.display = 'none';
+ }

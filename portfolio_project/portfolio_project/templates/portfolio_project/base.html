@@ -20,37 +20,43 @@
             </div>
             <div style="text-align: left;">
                 <form method="post">
-                    <button id="cat-button"type="submit" name="category-tab" style="display:{{cdisplay}};" >{{ category_button }}</button>
-                    <button id="close_button" type="submit" name="close" style="display:{{bdisplay}};">|||</button>
+                    <button id="cat-button" type="submit" name="category-tab" style="display:{{category_button}};">&#9776;</button>
                     {% csrf_token %}
                 </form>
+                
             </div>
         </div>
 
 
 
 
-        <div class="sidebar"style="display:{{bdisplay}};">
-            <form method="post" >
+        <div class="sidebar" style="display:{{sidebar_display}}; width: {{sidebar_width}};">
+            <form method="post">
+                <button id="close_button" >|||</button>
+                {% csrf_token %}
             </form>
-            
-            
             <a href="{% url 'main'%}"><span class="text" >Home</span></a>
-            <a href="{% url 'class'%}"><span class="text">Class Projects</span></a>
-            
-            <a href="{%url 'it'%}"><span class="text">IT Projects</span></a>
+
+            <a href="{% url 'class'%}"><span class="text">Class Projects </span><i class="arrow down"></i></a>
+            <a href="{% url 'ece_capstone'%}"><span>∟ECE Capstone</span></a>
+            <a href="{% url 'web_apps'%}"><span>∟Web Application</span></a>
 
 
-            <a href="{% url 'personal'%}"><span class="text">Personal Projects</span></a> 
-            
+            <a href="{% url 'it' %}"><span class="text">IT Projects<i class="arrow down"></i></span></a>
+            <a href="{% url 'amdibd' %}"><span>∟Amdibd</span></a>
+            <a href="{% url 'key_tracking' %}"><span>∟Key Tracking</span></a>            
+            <a href="{% url 'odoo' %}"><span>∟ODOO</span></a>
 
-            <a href="{% url 'cad'%}"><span class="text">CAD Projects</span></a> 
+            <a href="{% url 'personal'%}"><span class="text">Personal Projects</span><i class="arrow down"></i></a> 
+
+            <a href="{% url 'cad'%}"><span class="text">CAD Projects</span><i class="arrow down"></i></a> 
+            <a href="{% url 'ece_cad' %}"><span>∟ECE Capstone CAD</span></a>
             
 
             <a href="{% url 'resume'%}"><span class="text">Resume</span></a>
             <a href="{% url 'contact'%}"><span class="text">Contact</span></a>
         </div>
-        <div id="id_body_content">
+        <div id="id_body_content" style="margin-left: {{main_left}};">
             {% if message %}
                 {{message}}
             {% endif %}

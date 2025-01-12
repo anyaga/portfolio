@@ -4,18 +4,23 @@ from django.shortcuts import render, redirect, get_object_or_404
 #Helper Function for category button
 def category_press(request):
     context = {}
-    context['bdisplay'] = "none"
-    context['category_button'] = "≡"
-    #context['cdisplay'] = "block"
+    context['category_button'] = "inline-block"
+    context['sidebar_display'] = "none"
+    context['sidebar_width']   = "0%"
+    context['main_left']       = "10%" 
     
     if  request.method == 'POST' and 'category-tab' in request.POST:
-        context['bdisplay'] = "block"
-        context['category_button'] = "|||"
+        context['category_button'] = "inline-block"
+        context['sidebar_display'] = "block"
+        context['sidebar_width']   = "25%"
+        context['main_left']       = "35%" 
 
         #context['cdisplay'] = "none"
-    # if  request.method == 'POST' and 'close' in request.POST:
-    #     context['bdisplay'] = "none"
-    #     context['category_button'] = "≡"
+    if  request.method == 'POST' and 'close' in request.POST:
+        context['category_button'] = "inline-block"
+        context['sidebar_display'] = "none"
+        context['sidebar_width']   = "0%"
+        context['main_left']       = "10%" 
     return context
   
 def main_action(request):
