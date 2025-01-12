@@ -1,0 +1,4 @@
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-ro6*gq(l2+=02u%ak7f=m15-y_$9hrc)69g5ll96d@6=xhvs3#'
+
+
