@@ -22,7 +22,7 @@ CONFIG = ConfigParser()
 CONFIG.read(BASE_DIR / "config.ini")
 
 
-SECRET_KEY = CONFIG.get("Django", "Secret")
+SECRET_KEY = "django-insecure-ro6*gq(l2+=02u%ak7f=m15-y_$9hrc)69g5ll96d@6=xhvs3#"#CONFIG.get("Django", "Secret")
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -121,7 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

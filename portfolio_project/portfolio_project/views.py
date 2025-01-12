@@ -120,3 +120,8 @@ def cad_action(request):
 def ece_cad_action(request):
     context = category_press(request)
     return render(request,'portfolio_project/ece_cad.html',context)
+
+
+def reu_main_action(request):
+    context = category_press(request)
+    return render(request,'portfolio_project/REU_main_page.html',context)

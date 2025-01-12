@@ -179,7 +179,7 @@ div.content {
 }
 
 .arrow{
-    border: solid #39235b;
+    border: solid  rgba(29, 9, 87, 0.746);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;

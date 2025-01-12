@@ -33,4 +33,5 @@ urlpatterns = [
     path('odoo',              views.odoo_action,          name='odoo'),
     path('key_tracking',      views.key_tracking_action,  name='key_tracking'),
     path('amdibd',            views.amdibd_action,        name='amdibd'),
+    path('reu_main',          views.reu_main_action,      name='reu_main')
 ]

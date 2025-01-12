@@ -31,7 +31,7 @@
 
         <div class="sidebar" style="display:{{sidebar_display}}; width: {{sidebar_width}};">
             <form method="post">
-                <button id="close_button" >|||</button>
+                <button id="close_button" style="border:none;">|||</button>
                 {% csrf_token %}
             </form>
             <a href="{% url 'main'%}"><span class="text" >Home</span></a>
@@ -91,7 +91,7 @@
                 </div>
 
                 <div id="id_personal_projects_list" style="display:{{personal_proj_button}};">
-                    <a ><span>∟BUFFER</span></a>
+                    <a href="{% url 'reu_main' %}"><span>∟REU Website</span></a>
                 </div>
             </div>
             <div id="id_cad_projects"> 
