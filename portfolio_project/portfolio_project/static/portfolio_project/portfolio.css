@@ -40,6 +40,10 @@ https://codepen.io/sean_codes/pen/zwJQeB
     overflow: auto;
 }
 
+.sidebar div.list {
+    background-color: #8077ac;
+}
+
 .sidebar a {
     display: block;
     color: rgba(29, 9, 87, 0.746);
@@ -54,14 +58,26 @@ https://codepen.io/sean_codes/pen/zwJQeB
 
 
 .sidebar div.category_line:hover:not(.active), 
-.sidebar a:hover:not(.active){
+.sidebar a.project_link:hover:not(.active){
+    background-color: #5f437d;
+    color: white;
+
+} 
+
+.sidebar a.individual_link:hover:not(.active){
     background-color: #39235b;
     color: white;
 
 } 
 
-[class='arrow down']:hover:not(.active){
+
+[class='arrow']:hover:not(.active){
     border: solid #f0f0f0; 
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg); 
 }
 
 
@@ -78,6 +94,23 @@ div.content {
 
 .arr_button_div{
     width:20%;
+}
+.arr_button_divl{
+    width:20%;
+    border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #333;
+    position: relative;
+    top: 45px;
+    left: 350px;
+}
+
+.arr_button_divl:hover{
+    top: 35px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #333;
+    border-top: 10px solid transparent;    
 }
 .title_div{
     width:80%;
@@ -183,6 +216,8 @@ div.content {
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
   }
   
 /* .right {
@@ -198,11 +233,11 @@ div.content {
 .up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg); 
-}*/
+}
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-}
+}*/
 
 
 
