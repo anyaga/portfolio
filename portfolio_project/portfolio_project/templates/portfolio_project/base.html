@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head> 
-        <title>{% block title %} {% endblock %}</title>
+        <title>Portfolio: {% block title %} {% endblock %}</title>
         {% load static%}
         <link rel="stylesheet" type="text/css" href="static/portfolio_project/portfolio.css">
         <style>
@@ -10,31 +10,24 @@
     </head>
     <body>
         <div id="id_header_div">
-            <div>
-                <a id="page_title" href="{% url 'main'%}" ><h1 >Angel's Portfolio</h1></a>
-            </div>
-
+            <div><a id="page_title" href="{% url 'main'%}" ><h1 >Angel's Portfolio</h1></a></div>
             <div id="id_top_bar">
                 {% block top-bar%}
                 {% endblock %}
             </div>
-            <div style="text-align: left;">
+            <div id="id_category_button" style="text-align: left;">
                 <form method="post">
                     <button id="cat-button" type="submit" name="category-tab" style="display:{{category_button}};">&#9776;</button>
                     {% csrf_token %}
                 </form>
             </div>
         </div>
-
-
-
-
-        <div class="sidebar" style="display:{{sidebar_display}}; width: {{sidebar_width}};">
-            <form method="post">
+        <div class="sidebar" style="display:{{sidebar_display}};">
+            <form id="close_button_submission" method="post">
                 <button id="close_button" style="border:none;">|||</button>
                 {% csrf_token %}
             </form>
-            <a class="project_link" href="{% url 'main'%}"><span class="text" >Home</span></a>
+            <a id="id_home_link"class="project_link" href="{% url 'main'%}"><span class="text" >Home</span></a>
             <div id="id_class_project_page">
                 <div class="category_line">
                     <div class="title_div">
@@ -107,15 +100,13 @@
                             {% csrf_token %}
                         </form>                           
                     </div>
-                 
                 </div>
-
                 <div id="id_cad_projects_list" class="list" style="display:{{cad_proj_button}};">
                     <a class="individual_link" href="{% url 'ece_cad' %}" ><span>∟ECE Capstone CAD</span></a>
                 </div>
             </div>
-            <a class="project_link" href="{% url 'resume'%}"><span class="text">Resume</span></a>
-            <a class="project_link" href="{% url 'contact'%}"><span class="text">Contact</span></a>
+            <a id="id_resume_link" class="project_link" href="{% url 'resume'%}"><span class="text">Resume</span></a>
+            <a id="id_contact_link" class="project_link" href="{% url 'contact'%}"><span class="text">Contact</span></a>
         </div>
         <div id="id_body_content" style="margin-left: {{main_left}};">
             {% if message %}

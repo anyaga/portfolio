@@ -37,7 +37,7 @@ https://codepen.io/sean_codes/pen/zwJQeB
     background-color: #a59bd8;
     position: fixed;
     height: 100%;
-    overflow: auto;
+    overflow: visible;
 }
 
 .sidebar div.list {
@@ -50,12 +50,6 @@ https://codepen.io/sean_codes/pen/zwJQeB
     padding: 16px;
     text-decoration: none;
 }
-    
-.sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
 
 .sidebar div.category_line:hover:not(.active), 
 .sidebar a.project_link:hover:not(.active){
@@ -69,6 +63,32 @@ https://codepen.io/sean_codes/pen/zwJQeB
     color: white;
 
 } 
+
+
+@media screen and (max-width: 800px) {
+    .sidebar {
+
+        display: grid !important; /*FIGURE OUT HOW TO CLOSE*/
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: visible;
+    }
+    .sidebar a {
+        float: left;
+        width: 100%;
+    }
+    #id_body_content{
+        margin-left:4em !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
 
 
 [class='arrow']:hover:not(.active){
@@ -115,24 +135,6 @@ div.content {
 .title_div{
     width:80%;
 }
-
-@media screen and (max-width: 700px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-}
-
-@media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
-    }
-}
-
 
 #close_button{
     background-color: transparent;
@@ -199,8 +201,8 @@ div.content {
 }
 
 #id_body_content{
-    margin-left:8em;
-    margin-right:8em;
+    margin-right:4em;
+    overflow: visible;
 }
 
 
@@ -240,4 +242,6 @@ div.content {
 }*/
 
 
-
+.individual_link span{
+    margin-left:0.5em;
+}
