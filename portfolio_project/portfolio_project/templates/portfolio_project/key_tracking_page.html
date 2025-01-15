@@ -8,29 +8,48 @@
 
 {% block content %}
     <div><h1 id="id_title">Google Appscript - Key Tracking Project</h1></div> 
+    <div>
+        <p>Link to the Github Repo:</p>
+        <a href="https://github.com/anyaga/key-tracking-project">
+            <img src="static/portfolio_project/github-logo.jpg" alt="GitHub Link" style="height:50px;">
+        </a>        
+    </div>
+
+    <a href="https://docs.google.com/document/d/10b_W9_Wc53FivG2f70GYoJsOgUpKdnoGl6Zfqm3eg70/edit?usp=sharing">
+        Link to Documentation
+    </a>
 
     <p id="page_summary"> 
-        Lorem ipsum odor amet, consectetuer adipiscing elit. 
-        Duis lacinia vehicula aptent etiam conubia nunc viverra 
-        ullamcorper aptent. Sodales phasellus natoque imperdiet 
-        natoque consequat lacinia nunc proin. Vel montes suscipit 
-        penatibus lacinia nunc suspendisse sed potenti cubilia. 
-        Est interdum magnis, ad tortor ligula ornare. Iaculis 
-        quisque viverra arcu; aptent lobortis elit. Placerat tortor 
-        placerat pulvinar; nam metus feugiat sodales. Integer vivamus 
-        euismod porta nostra mattis augue per magnis. Orci posuere dapibus 
-        torquent curabitur curabitur volutpat at.
+        This project was brought to our --- by the Facilities Manager.
+        The manager needed a better way to track keys given to
+        differnt people in the department. Previously, the manager tracked
+        all information about key placement through a spreadsheet. During graduation periods,
+        it was difficult to keep track of keys that were and were not returned. This made it so 
+        several rooms needed to be re-keyed to maintain security.
+        <br><br>
+        The manager requested that we create a product in the Google ecosystem
+        that allowed her to better track keys given, keys expired, and rooms that
+        need to be rekeyed due to secruity concerns.
+        <br><br>
+        I created a Google Appscript Project. This project starts by collect all key information we
+        have by parsing spreadsheets and Google Form responses. For a key entry to be accepted,
+        it needs to have the individuals full name, andrewID (school ID name), advisor(if a student),
+        date key was given, date key is set to expire (graduation for students), the key number, and
+        the room number for the key. These response are added to a spreadsheet in which each sheet is 
+        the expiration year. There is a main sheet that displays keys that are going to expire soon, expired 
+        keys, and improper key entry's. 
+        <br><br>
+        A sidebar is displayed that allows you to work with the spreadsheet. This sidebar includes the 
+        following features: 
     </p>
 
-    <p>
-        Add Link to GitHub Account
-    </p>
-
-    <p> 
-        Add link to documentation guide
-    </p>
-
+    <li>Edit an entry</li>
+    <li>Delete an entry</li>
+    <li>Look up all keys checked out by one person</li>
+    <li>Email people that have expired keys or soon to expired keys</li>
     <p>
         video of the platform in use
     </p>
+
+    
 {% endblock%}
