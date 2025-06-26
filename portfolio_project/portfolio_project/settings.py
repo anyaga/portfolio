@@ -12,8 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from configparser import ConfigParser
-import os
 
+import dj_database_url
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -88,17 +89,25 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dq_portfolio',
-        'USER': 'anyaga',
-        'PASSWORD': 'Wanjiru137*',
-        'HOST': 'localhost', # Or use your host (e.g., '127.0.0.1')
-        'PORT': '5432', # Default PostgreSQL port
-    }
-}
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'dq_portfolio',
+#         'USER': 'anyaga',
+#         'PASSWORD': 'Wanjiru137*',
+#         'HOST': 'localhost', # Or use your host (e.g., '127.0.0.1')
+#         'PORT': '5432', # Default PostgreSQL port
+#     }
+# }
+
+
+DATABASES = {
+    "default": dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
+    )
+}
 
 
 # Password validation
